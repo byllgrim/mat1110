@@ -1,0 +1,17 @@
+Regn ut farten og akselerasonsvektoren
+og plott farten som funksjon av tiden i octave.\\
+
+Vi er gitt
+$$\vec{r}(t) = (t\cos{t},t\sin{t},\frac{2 \sqrt{2}}{3}t^{\frac{3}{2}})$$
+
+\paragraph{Hastighetsvektor} \mbox{} \\
+For å finne farten $v$, må man først finne hastigheten $\vec{v}$.
+Hastigheten er simpelthen $\vec{r}$ derivert komponentvis.
+$$\vec{v} = \vec{r}'$$
+Ved produktregel og andre vanlige derivasjonsregler
+$$\vec{v} = (\cos{t}-t\sin{t}, \sin{t}+t\cos{t},\sqrt{2}t^{1/2})$$
+
+\paragraph{The fart} \mbox{} \\
+Farten $v$ er lengden av $\vec{v}$.
+$$v = \sqrt{(\cos{t}-t\sin{t})^2 + (\sin{t}+t\cos{t})^2 + (\sqrt{2}t^{1/2})^2}
+= \sqrt{() + () + 2t}$$
