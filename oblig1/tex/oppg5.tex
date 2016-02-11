@@ -1,0 +1,27 @@
+Anta at kurven beskriver en tråd
+og at tettheten er gitt ved
+$f(x,y,z) = x^2 + y^2 + z^2$.
+Regn ut massen.
+
+$$\int_C f \cdot ds$$
+$$= \int_0^{2\pi} f(\vec{r}(t)) \cdot v(t)\quad dt$$
+
+\paragraph{Mellomregning} \mbox{} \\
+$$\vec{r}(t) = (t\cos{t},t\sin{t},\frac{2 \sqrt{2}}{3}t^{\frac{3}{2}})$$
+$$f(\vec{r}(t)) = t^2\cos^2t + t^2\sin^2t+\frac{8}{9}t^3$$
+$$= t^2(\cos^2t + \sin^2d) + \frac{8}{9}t^3$$
+$$= t^2 + \frac{8}{9}t^3$$
+
+\paragraph{Mellomregning 2} \mbox{} \\
+$$f(\vec{r}(t)) \cdot v(t)$$
+$$= (\tfrac{8}{9}t^3 + t^2) \cdot (t+1)$$
+$$= \tfrac{8}{9}t^4 + \tfrac{8}{9}t^3 + t^3 + t^2$$
+$$= \tfrac{8}{9}t^4 + \tfrac{17}{9}t^3 + t^2$$
+
+\paragraph{Satt inn i integralet} \mbox{} \\
+$$\int_0^{2\pi} f(\vec{r}(t)) \cdot v(t)\quad dt$$
+$$= \int_0^{2\pi} \tfrac{8}{9}t^4 + \tfrac{17}{9}t^3 + t^2$$
+$$= \left[\frac{8}{45}t^5 + \frac{17}{36}t^4
+     + \frac{1}{3}t^3\right]_0^{2\pi}$$
+$$= \frac{8}{45}(2\pi)^5 + \frac{17}{36}(2\pi)^4 + \frac{1}{3}(2\pi)^3$$
+$$\frac{256}{45}\pi^5 + \frac{272}{36}\pi^4 + \frac{8}{3}\pi^3$$
