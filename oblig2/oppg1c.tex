@@ -1,8 +1,52 @@
-\$ octave oppg1c.m
+\paragraph{Matlab} \mbox{} \\
+\lstinputlisting{oppg1c.m}
+\begin{lstlisting}
+$ octave oppg1c.m
 ans =
-
    0.10000
    0.30000
    1.00000
+\end{lstlisting}
 
-TODO
+
+
+\paragraph{Gjett på egenvektor 1} \mbox{} \\
+Ved $\lambda = 0.1$ gjør jeg en rask regning (skulle man gjette anerledes?)
+og får $$\vec{v_2} = \begin{pmatrix} -2 & 1 & 1 \end{pmatrix}$$
+
+Bekreft ved regning: $A\vec{v_2} = \lambda_2 \vec{v_2}$
+$$A\vec{v_2} = \begin{array}{c c c|c}
+                   & & & -2 \\
+                   & & & 1 \\
+                   & & & 1 \\
+                  \hline
+                  0.4 & 0.3 & 0.3 & -0.8 + 0.3 + 0.3 \\
+                  0.3 & 0.5 & 0.2 & -0.6 + 0.5 + 0.2 \\
+                  0.3 & 0.2 & 0.5 & -0.6 + 0.2 + 0.5
+                  \end{array}
+             = \begin{pmatrix} -0.2 \\ 0.1 \\ 0.1 \end{pmatrix}$$
+$$\lambda_2\vec{v_2} = 0.1\cdot \begin{pmatrix} -2 \\ 1 \\ 1 \end{pmatrix}
+                     = \begin{pmatrix} -0.2 & 0.1 & 0.1 \end{pmatrix}$$
+Det var den samme vektoren så egenvektoren er bekreftet riktig.
+
+
+
+\paragraph{Gjett på egenvektor 2} \mbox{} \\
+Ved $\lambda = 0.3$ \emph{'gjetter'} jeg på vektoren
+$$\vec{v_2} = \begin{pmatrix} 0 & -1 & 1 \end{pmatrix}$$
+
+Ved regning får jeg
+$$A\vec{v_3} = \begin{array}{c c c|c}
+                   & & & 0 \\
+                   & & & -1 \\
+                   & & & 1 \\
+                  \hline
+                  0.4 & 0.3 & 0.3 & -0.3 + 0.3 \\
+                  0.3 & 0.5 & 0.2 & -0.5 + 0.2 \\
+                  0.3 & 0.2 & 0.5 & -0.2 + 0.5
+                  \end{array}
+             = \begin{pmatrix} 0 \\ -0.3 \\ 0.3 \end{pmatrix}$$
+$$\lambda_3\vec{v_3} = 0.3\cdot \begin{pmatrix} 0 \\ -1 \\ 1 \end{pmatrix}
+                     = \begin{pmatrix} 0 & -0.3 & 0.3 \end{pmatrix}$$
+
+Altså er $A\vec{v_3} = \lambda_3\vec{v_3}$.
