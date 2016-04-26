@@ -1,0 +1,47 @@
+$$\vec{x_0} = (1,1)$$
+
+
+
+\paragraph{Finn Jacobimatrisen til F} \mbox{} \\
+$$J = \begin{pmatrix}
+      \frac{\delta\vec{F_1}}{\delta x} & \frac{\delta\vec{F_1}}{\delta y} \\
+      \frac{\delta\vec{F_2}}{\delta x} & \frac{\delta\vec{F_2}}{\delta y}
+      \end{pmatrix}
+    = \begin{pmatrix}
+      2xy & x^2-2y \\
+      1   & 0
+      \end{pmatrix}$$
+
+
+
+\paragraph{Første iterasjon med Newtons metode} \mbox{} \\
+$$\vec{x_1} = \vec{x_0} - \vec{F}'(x_0)^{-1}\vec{F}(x_0)$$
+$$ = (1,1) - \begin{pmatrix}2&-1\\1&0\end{pmatrix}^{-1} (0,-2) = \cdots$$
+
+For å finne den inverse skjøter jeg på $I_2$ og radreduserer.
+$$(\vec{F}(\vec{x_0}),I_2) =
+  \begin{pmatrix} 2 & -1 & 1 & 0 \\ 1 & 0 & 0 & 1 \end{pmatrix}$$
+$$\sim \begin{pmatrix} 1 & 0 & 0 & 1 \\ 0 & -1 & 1 & -2 \end{pmatrix}$$
+$$\sim \begin{pmatrix} 1 & 0 & 0 & 1 \\ 0 & 1 & -1 & 2 \end{pmatrix}
+  = (I_2, \vec{F}(\vec{x_0})^{-1})$$
+
+Den inverse ganget med $\vec{F}(\vec{x_0})$.
+$$\begin{array}{c c|c}
+     &   &  0 \\
+     &   & -2 \\
+  \hline
+   0 & 1 & -2 \\
+  -1 & 2 & -4
+  \end{array}$$
+
+Fortsetter der jeg slapp
+$$\vec{x_1} = \vec{x_0} - \vec{F}'(x_0)^{-1}\vec{F}(x_0)$$
+$$ = (1,1) - \begin{pmatrix}2&-1\\1&0\end{pmatrix}^{-1} (0,-2)$$
+$$ = (1,1) - (-2,-4) = (-1,-3)$$
+Så $\vec{x_1} = (-1,-3)$
+
+
+
+\paragraph{Andre iterasjon} \mbox{} \\
+$$\vec{x_2} = \vec{x_1} - \vec{F}'(x_1)^{-1}\vec{F}(x_1)$$
+TODO
