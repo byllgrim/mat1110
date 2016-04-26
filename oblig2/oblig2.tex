@@ -1,8 +1,13 @@
 \documentclass{article}
 \usepackage{amsmath}
+\usepackage{float}
+\usepackage{graphicx}
 \usepackage[utf8]{inputenc}
 \usepackage{listings}
-  \lstset{frame=single}
+  \lstset{captionpos=b, frame=single}
+\newcommand{\colvec}[3]{
+    \begin{pmatrix} #1 \\ #2 \\ #3 \end{pmatrix}
+}
 
 \begin{document}
   \title{MAT1110 - Obligatorisk oppgave 2.}
@@ -15,4 +20,8 @@
     \input{oppg1b}
   \section{Oppg1.c)}
     \input{oppg1c}
+  \section{Oppg1.d)}
+    \input{oppg1d}
+  \section{Oppg1.e)}
+    \input{oppg1e}
 \end{document}

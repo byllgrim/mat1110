@@ -1,0 +1,54 @@
+Ved nullte dag er antall biler i hver by
+$$\vec{x_0} = \begin{pmatrix} 30 \\ 60 \\ 30 \end{pmatrix}$$
+
+
+
+\paragraph{Lineærkombinasjon} \mbox{} \\
+For å skrive $\vec{x_0}$ som en lineærkombinasjon av de tre egenvektorene
+setter jeg opp følgende
+$$\colvec{30}{60}{30}
+  = u\colvec{1}{1}{1} + i\colvec{-2}{1}{1} + o\colvec{0}{-1}{1}$$
+$$\colvec{30}{60}{30} = \colvec{u-2i}{u+i-o}{u+i+o}$$
+
+Dette kan løses med radoperasjoner.
+$$\begin{pmatrix}
+  1 & -2 &  0 & 30 \\
+  1 &  1 & -1 & 60 \\
+  1 &  1 &  1 & 30
+  \end{pmatrix}
+  \sim \begin{pmatrix}
+       1 & -2 &  0 & 30 \\
+       0 &  3 & -1 & 30 \\
+       0 &  3 &  1 & 0
+       \end{pmatrix}
+  \sim \begin{pmatrix}
+       1 & -2 &  0   & 30 \\
+       0 &  1 & -1/3 & 10 \\
+       0 &  0 &  2   & -30
+       \end{pmatrix}$$
+Som gir $$u=40, \quad i=5, \quad o=-15$$
+Altså er $$\vec{x_0} = 40\vec{v_1} + 5\vec{v_2} - 15\vec{v_3}$$
+
+
+
+\paragraph{Etter n dager} \mbox{} \\
+Antall biler i hver by etter n dager $\vec{x_n}$ er gitt ved
+$$\vec{x_n} = A^n\vec{x_0}$$
+
+Siden vi har $x_0$ som en lineærkombinasjon kan vi skrive
+$$\vec{x_n} = A^n\vec{x_0}$$
+$$= A^n(40\vec{v_1} + 5\vec{v_2} - 15\vec{v_3})$$
+$$= 40A^n\vec{v_1} + 5A^n\vec{v_2} - 15A^n\vec{v_3}$$
+$$= 40\lambda_1^n\vec{v_1} + 5\lambda_2^n\vec{v_2} - 15\lambda_3^n\vec{v_3}$$
+$$= 40\vec{v_1} + 5(0.1)^n\vec{v_2} - 15(0.3)^n\vec{v_3}$$
+
+Altså er
+$$\vec{x_n} =
+\colvec{40 - 10(0.1)^n}{40 + 5(0.1)^n + 15(0.3)^n}{40 + 5(0.1)^n - 15(0.3)^n}$$
+
+
+
+\paragraph{Når n går mot uendelig} \mbox{} \\
+Når n går mot uendelig vil de siste leddene ovenfor gå mot null.
+Da står vi igjen med
+$$\vec{x_\infty} = \begin{pmatrix} 40 & 40 & 40 \end{pmatrix}$$
