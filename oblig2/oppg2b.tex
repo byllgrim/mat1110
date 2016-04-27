@@ -3,7 +3,8 @@ $$\vec{x_0} = (1,1)$$
 
 
 \paragraph{Finn Jacobimatrisen til F} \mbox{} \\
-$$J = \begin{pmatrix}
+$$J = \vec{F}'
+    = \begin{pmatrix}
       \frac{\delta\vec{F_1}}{\delta x} & \frac{\delta\vec{F_1}}{\delta y} \\
       \frac{\delta\vec{F_2}}{\delta x} & \frac{\delta\vec{F_2}}{\delta y}
       \end{pmatrix}
@@ -37,11 +38,33 @@ $$\begin{array}{c c|c}
 Fortsetter der jeg slapp
 $$\vec{x_1} = \vec{x_0} - \vec{F}'(x_0)^{-1}\vec{F}(x_0)$$
 $$ = (1,1) - \begin{pmatrix}2&-1\\1&0\end{pmatrix}^{-1} (0,-2)$$
-$$ = (1,1) - (-2,-4) = (-1,-3)$$
-Så $\vec{x_1} = (-1,-3)$
+$$ = (1,1) - (-2,-4) = (3,5)$$
+Så $\vec{x_1} = (3,5)$
 
 
 
 \paragraph{Andre iterasjon} \mbox{} \\
 $$\vec{x_2} = \vec{x_1} - \vec{F}'(x_1)^{-1}\vec{F}(x_1)$$
-TODO
+$$= (3,5) - \begin{pmatrix}30&-1\\1&0\end{pmatrix}^{-1}(20,0)$$
+
+Jeg inverterer det som inverteres må.
+$$(\vec{F}'(x_1),I_2) = \begin{pmatrix}30&-1&1&0\\1&0&0&1\end{pmatrix}$$
+$$\sim \begin{pmatrix}1&0&0&1\\0&-1&1&-30\end{pmatrix}$$
+$$\sim \begin{pmatrix}1&0&0&1\\0&1&-1&30\end{pmatrix}
+  = (I_2,\vec{F}'(x_1)^{-1})$$
+
+Ganger det som ganges må.
+$$\begin{array}{c c|c}
+     &    &  20 \\
+     &    &   0 \\
+  \hline
+   0 &  1 &   0 \\
+  -1 & 30 & -20
+  \end{array}$$
+
+Fortsetter der jeg slapp
+$$\vec{x_2} = \vec{x_1} - \vec{F}'(x_1)^{-1}\vec{F}(x_1)$$
+$$= (3,5) - \begin{pmatrix}30&-1\\1&0\end{pmatrix}^{-1}(20,0)$$
+$$= (3,5) - (0,-20) = (3,25)$$
+
+Så er $\vec{x_2} = (3, 25)$

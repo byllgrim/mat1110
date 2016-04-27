@@ -1,1 +1,40 @@
-TODO
+\paragraph{Newtons metode i matlab} \mbox{} \\
+\lstinputlisting[caption=10 iterasjoner med matlab]{oppg2c.m}
+\begin{lstlisting}[caption=Output]
+$ octave oppg2c.m
+x =
+
+ Columns 1 through 8:
+
+    1.0000    3.0000    3.0000    3.0000    3.0000    3.0000    3.0000    3.0000
+    1.0000    5.0000   25.0000   15.2439   10.8143    9.2607    9.0071    9.0000
+
+ Columns 9 and 10:
+
+    3.0000    3.0000
+    9.0000    9.0000
+\end{lstlisting}
+
+Den konvergerer det ene av nulltpunktene som jeg fant i oppgave 2a, (3,9).
+
+
+
+\paragraph{Alternativt startpunkt} \mbox{} \\
+Hva skjer hvis $x_0 = (1,0.1)$.
+
+\begin{lstlisting}[caption=Output]
+$ octave oppg2c-alt.m
+x =
+
+ Columns 1 through 8:
+
+   1.00000   3.00000   3.00000   3.00000   3.00000   3.00000   3.00000   3.00000
+   0.10000  -0.51250  -0.02620  -0.00008  -0.00000  -0.00000   0.00000   0.00000
+
+ Columns 9 and 10:
+
+   3.00000   3.00000
+   0.00000   0.00000
+\end{lstlisting}
+
+Nå fant vi det andre nullpunktet fra 2a, $(3,0)$.
