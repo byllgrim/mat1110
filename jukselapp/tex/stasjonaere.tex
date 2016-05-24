@@ -1,0 +1,27 @@
+Finn de stajonære punktene til f.
+Avgjør om de er sadelpunkter, maksimum- elles minimumspunkter.
+
+
+
+\paragraph{Finn punktene} \mbox{} \\
+Partiellderiverte må være null.
+$$\frac{\partial f}{\partial x} = \cdots = 0$$
+$$\frac{\partial f}{\partial y} = \cdots = 0$$
+Hva må $x$ og $y$ være da?
+Dette er punktene dine.
+
+
+
+\paragraph{Avgjør sadel, max, min} \mbox{} \\
+Hessematrisen
+$$Hf(\vec{x}) = \begin{pmatrix}
+                \dfrac{\partial^2f}{\partial x^2}
+                  & \dfrac{\partial^2f}{\partial x \partial y} \\[18pt]
+                \dfrac{\partial^2f}{\partial x \partial y}
+                  & \dfrac{\partial^2f}{\partial y^2}
+                \end{pmatrix}$$
+
+Det første tallet i $Hf(\vec{a})$ avgjør typen
+$$\frac{\partial^2f}{\partial x^2} > 0 \implies \text{min}$$
+$$\frac{\partial^2f}{\partial x^2} < 0 \implies \text{max}$$
+$$\frac{\partial^2f}{\partial x^2} = 0 \implies \text{sadel?}$$
