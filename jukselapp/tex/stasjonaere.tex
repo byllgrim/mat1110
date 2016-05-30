@@ -15,6 +15,7 @@ Husk x og y kan begge være null!
 
 
 \paragraph{Avgjør sadel, max, min} \mbox{} \\
+ADVARSEL*\\\\
 Hessematrisen
 $$Hf(\vec{x}) = \begin{pmatrix}
                 \dfrac{\partial^2f}{\partial x^2}
@@ -27,3 +28,13 @@ Det første tallet i $Hf(\vec{a})$ avgjør typen
 $$\frac{\partial^2f}{\partial x^2} > 0 \implies \text{min}$$
 $$\frac{\partial^2f}{\partial x^2} < 0 \implies \text{max}$$
 $$\frac{\partial^2f}{\partial x^2} = 0 \implies \text{sadel}$$
+
+*det kan hende at dette bare gjelder for et spesialtilfelle. Se neste avsnitt.
+
+
+
+\paragraph{Sadel, max, min (fullstendig)} \mbox{} \\
+Regn ut determinanten til Hessematrisen.
+$$\det{H} > 0 \implies \text{min?}$$
+$$\det{H} < 0 \implies \text{sadel}$$
+$$\det{H} = 0 \implies \text{max?}$$
